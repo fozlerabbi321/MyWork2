@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activitis.PhoneAhActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/otp"
+        android:scaleType="fitXY"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:text="@string/enter_your_mobile_number_to_create_account"/>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_below="@+id/tv"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp_sign_up"
+            app:ccp_textSize="14sp"
+            app:ccp_defaultNameCode="BD"
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/input_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:inputType="phone"
+            android:layout_toEndOf="@id/ccp_sign_up"
+            android:hint="@string/phone" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/sendOTP"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:textAllCaps="false"
+        android:text="@string/send"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/layout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

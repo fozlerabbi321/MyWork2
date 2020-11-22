@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_registerbg"
+    tools:context=".view.activitis.LoginActivity">
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:text="@string/signt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_signin_email"
+            style="@style/sign_et"
+            android:hint="@string/signemail"/>
+
+        <EditText
+            android:id="@+id/et_signin_password"
+            style="@style/sign_et"
+            android:inputType="textPassword"
+            android:layout_below="@id/et_signin_email"
+            android:hint="@string/signpass"/>
+
+        <RelativeLayout
+            android:layout_below="@id/et_signin_password"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="@string/signin"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp" />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/signin_btn"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/ic_right_arow"
+                app:cb_color="#4141E1"
+                app:cb_pressedRingWidth="8dip"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/signintosignup"
+        style="@style/sign_tv"
+        android:layout_alignParentBottom="true"
+        android:textColor="#2A2B30"
+        android:text="@string/signup"/>
+
+    <TextView
+        android:id="@+id/signin_forgot"
+        style="@style/sign_tv"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/forgot"/>
+</RelativeLayout>
